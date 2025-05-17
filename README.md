@@ -1,1 +1,150 @@
-# Lin-bday
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, bb!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffffff, #cbfbfd);
+      font-family: 'arial', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 2em;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      background-color: #f894cb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #67324f;
+    }
+    .spotify-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  background-color: #1DB954; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+    }
+
+    .spotify-button:hover {
+  background-color: #1ed760; 
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1em;
+      color: #ef72b0;
+    }
+    
+    .mySlides img {
+        width: 100% ;
+      display: block ;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.2s;
+    }
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi, bb!👋🏻</h1>
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://drive.google.com/uc?export=view&id=1-uJr1uXSjleq6IzCSz_I9bnqDdYRLvLM" alt="1">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://drive.google.com/uc?export=view&id=1-uJr1uXSjleq6IzCSz_I9bnqDdYRLvLM" alt="2">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://drive.google.com/uc?export=view&id=17F2kWwS-2UTO7ZXino25Vgdr3Xir60dD" width="100" height="200">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://drive.google.com/uc?export=view&id=1THKGqu-k3rGgXXP7KjDxm_k5DxA14A4M" width="100" height="200">
+    </div>
+  </div>
+  
+  <button class="button" onclick="showMessage()">Show Message</button>
+  <button class="button" id="celebrate-button">Celebrate!</button>
+  
+  <div id="message">
+
+ <p>Annyeong bb 👋🏻</p>
+
+    <p>Today, you turn 24 — and I just want you to know how excited I am to be celebrating this day by your side.</p>
+    <p>I still remember the first time I saw you — it was May 2023. I didn’t know it back then, but that moment would slowly become one of the most important turning points in my life. You were so bright, so kind, and somehow, effortlessly unforgettable.</p>
+
+    <p>In February 2024, when you left for the outback, I missed you more than I expected. And when we returned to Sydney in March, I realized how much you meant to me — that life felt lighter, warmer, and more meaningful with you in it.</p>
+
+    <p>Since then, we've made memories I’ll always cherish. Almost every weekend together, sharing thoughts, laughter, quiet moments, and silly ones too.</p>
+
+    <p>And who could forget our Melbourne staycation on New Year’s? Just the two of us, starting the year in a way I wish every year could begin — with love, peace, and your hand in mine.</p>
+
+    <p>Tomorrow is your birthday — a celebration of your life, your soul, your smile. And I want you to know: I see you. I admire your strength, your compassion, your laughter, and your heart. You are loved — deeply, truly, and endlessly.</p>
+
+    <p>So today, I wish you happiness not just for this birthday, but for every day. I’ll be here — for the birthdays, the weekends, the milestones, the quiet nights, and everything in between.</p>
+    <p>Happy 24th, my bb. You are my joy And home. 💖</p>
+    <p>I Love You 🥰</p>
+</div>
+  <a href="https://open.spotify.com/track/2410JmUOXeja4aRCRgMDq9" target="_blank" class="spotify-button">
+  Play me plizz 😢
+</a>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+
+    function showMessage() {
+      var message = document.getElementById("message");
+      message.style.display = "block";
+    }
+    document.getElementById('celebrate-button').addEventListener('click', function () {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+</Script>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+       const slides = document.getElementsByClassName("mySlides");
+    for (let s of slides) s.style.display = "none";
+    slideIndex = (slideIndex % slides.length) + 1;
+    slides[slideIndex - 1].style.display = "block"; 
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+</body>
+</html>
